@@ -4,85 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Hottest Tables</title>
+    <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <a href = 'tables.html'></a>
     <a href = 'reserve.html'></a>
-    <title>The hottest Tables</title>
 </head>
 <body>
 
-        <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
-                  <img src="./images/foodLogo.jpg" width="30" height="30" class="d-inline-block align-top" alt="hot restaurant">
-                  The Hottest Tables
-                </a>
-            </nav>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="./home.html">
+          <img src="./images/wuLogo.jpg" width="30" height="30" class="d-inline-block align-top" alt="hot restaurant">
+          The Hottest Tables
+        </a>
+    </nav>
+
+    <!-- chef wu jumbotron -->
     <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">CHEF WU TABLES</h1>
-                  <p class="lead">s o m e | h o t | w u | t a b l e s</p>
+        <div class="container">
+            <h1 class="display-4">CHEF WU TABLES</h1>
+            <p class="lead">s o m e | h o t | w u | t a b l e s</p>
+        </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <!-- tables button -->
+                <a href="./tables.html" class="btn btn-dark btn-lg">VIEW TABLES</a>
+            </div>
+
+            <div class="col-3">
+                <!-- reserve button -->
+                <a href="./reserve.html" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
+            </div>
+
+            <div class="col-3">
+                <!-- home button -->
+                <a href="./home.html" class="btn btn-light btn-lg">HOME</a>
+            </div>
+        </div>
+</div>
+
+    <!-- table container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <br><br>
+          <!-- tables populated -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  Table X
                 </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name</li>
+                  <li class="list-group-item">Phone Number</li>
+                  <li class="list-group-item">Email</li>
+                </ul>
               </div>
+            <br><br>
+        </div>
+      </div>
+    </div>
 
-
-
-              <table class="table table-borderless">
-                    <thead>
-                      <tr>
-                          <th scope="col">First Name</th>
-                          <th scope="col"> Phone Number</th>
-                          <th scope="col">Email</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        
-                        <td><input type = 'text' id ='name'></td>
-                        <td><input type = 'text' id = 'phone'></td>
-                        <td><input type = 'text' id = 'email'></td>
-
-                      </tr>
-                      
-                    </tbody>
-                </table>
-                <button type="button" id ='button'class="btn btn-light">Please Take A Seat</button>
-
-
-
-
-
-
-
-
-<script>
-    document.getElementById('button').addEventListener('click', e =>{
-        e.preventDefault 
-        let food = {
-            name: document.getElementById('name').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value
-            
-        }
-        console.log(food)
-    })
-
-
-    document.getElementById('button').addEventListener('click', e =>{
-        e.preventDefault 
-        let food = {
-            name: document.getElementById('name').value = '',
-            phone: document.getElementById('phone').value = '',
-            email: document.getElementById('email').value = ''
-            
-        }
-        console.log(food)
-    })
-
-
-</script>
 <!-- bootstrap CDN -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

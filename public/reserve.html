@@ -14,7 +14,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="./home.html">
           <img src="./images/wuLogo.jpg" width="30" height="30" class="d-inline-block align-top" alt="hot restaurant">
-          The Hottest Restaurant
+          The Hottest Waitlist
         </a>
     </nav>
 
@@ -38,8 +38,14 @@
                     <!-- reserve button -->
                     <a href="./reserve.html" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
                 </div>
+
+                <div class="col-3">
+                    <!-- home button -->
+                    <a href="./home.html" class="btn btn-light btn-lg">HOME</a>
+                </div>
             </div>
-        </div>
+    </div>
+
 
     <!-- reserve container -->
     <div class="container">
@@ -60,12 +66,39 @@
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="Email">
                             </div>
-                            <button type="submit" class="btn btn-dark">Reserve</button>
+                            <button type="submit" id="button" class="btn btn-dark">Reserve</button>
                             
                     </form>
             </div>
         </div>
     </div>
+
+<!-- app js -->
+<script>
+        document.getElementById('button').addEventListener('click', e =>{
+            e.preventDefault 
+            let food = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value
+                
+            }
+            console.log(food)
+        })
+    
+    
+        document.getElementById('button').addEventListener('click', e =>{
+            e.preventDefault 
+            let food = {
+                name: document.getElementById('name').value = '',
+                phone: document.getElementById('phone').value = '',
+                email: document.getElementById('email').value = ''
+                
+            }
+            // console.log(food)
+        })
+    
+</script>
 
 <!-- bootstrap js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/davidwu92/HotRestaurant/issues"
   },
-  "homepage": "https://github.com/davidwu92/HotRestaurant#readme"
+  "homepage": "https://github.com/davidwu92/HotRestaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
 }

@@ -19,11 +19,22 @@ app.post('/reservations', (req, res)=>{
     console.log(waitlist)
   }
   res.sendStatus(200)
-})
+ })
 
-app.get('/tables', (req, res)=>{
+// app.get("/home", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/index.html'))
+// })
+// app.get("/reserve", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/reserve.html'))
+// })
+// app.get("/tables", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/tables.html'))
+// })
+
+app.get('/showtables', (req, res)=>{
+  console.log("getting tables")
   res.send(tables)
-  res.send(waitlist)
+  // res.send(waitlist)
 })
 
 

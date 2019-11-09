@@ -14,7 +14,7 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="./index.html">
           <img src="./images/wuLogo.jpg" width="30" height="30" class="d-inline-block align-top" alt="hot restaurant">
           The Hottest Tables
         </a>
@@ -33,45 +33,55 @@
         <div class="row">
             <div class="col-3">
                 <!-- tables button -->
-                <a href="/tables" class="btn btn-dark btn-lg">VIEW TABLES</a>
+                <a href="/tables.html" class="btn btn-dark btn-lg">VIEW TABLES</a>
             </div>
 
             <div class="col-3">
                 <!-- reserve button -->
-                <a href="/reserve" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
+                <a href="/reserve.html" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
             </div>
 
             <div class="col-3">
                 <!-- home button -->
-                <a href="/home" class="btn btn-light btn-lg">HOME</a>
+                <a href="/index.html" class="btn btn-light btn-lg">HOME</a>
             </div>
         </div>
 </div>
 
     <!-- table container -->
-    <div class="container">
+    <div  class="container">
       <div class="row">
-        <div class="col-6">
-          <br><br>
-          <!-- tables populated -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                  Table X
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Name</li>
-                  <li class="list-group-item">Phone Number</li>
-                  <li class="list-group-item">Email</li>
-                </ul>
-              </div>
-            <br><br>
+        <div id="tables" class="col-6">
+          <!-- Table Space -->
         </div>
       </div>
     </div>
 
-<!-- bootstrap CDN -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-
+  // /axios showtables
+  axios.get('/showtables')
+    .then(res=>{
+      console.log(res.data)
+      for (let i=0; i<res.data.length; i++) {
+        let tablecard = document.createElement('div')
+        tablecard.innerHTML = `
+        <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  Table ${i+1}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name: ${res.data[i].name} </li>
+                  <li class="list-group-item">Phone Number: ${res.data[i].phone}</li>
+                  <li class="list-group-item">Email: ${res.data[i].email}</li>
+                </ul>
+            </div>
+        <br>
+        `
+        console.log(tablecard)
+        document.getElementById('tables').append(tablecard)
+      }
+    })
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

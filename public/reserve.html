@@ -12,7 +12,7 @@
     
     <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="./index.html">
           <img src="./images/wuLogo.jpg" width="30" height="30" class="d-inline-block align-top" alt="hot restaurant">
           The Hottest Waitlist
         </a>
@@ -31,17 +31,17 @@
             <div class="row">
                 <div class="col-3">
                     <!-- tables button -->
-                    <a href="/tables" class="btn btn-dark btn-lg">VIEW TABLES</a>
+                    <a href="/tables.html" class="btn btn-dark btn-lg">VIEW TABLES</a>
                 </div>
     
                 <div class="col-3">
                     <!-- reserve button -->
-                    <a href="/reserve" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
+                    <a href="/reserve.html" class="btn btn-secondary btn-lg">RESERVE A TABLE</a>
                 </div>
 
                 <div class="col-3">
                     <!-- home button -->
-                    <a href="/home" class="btn btn-light btn-lg">HOME</a>
+                    <a href="/index.html" class="btn btn-light btn-lg">HOME</a>
                 </div>
             </div>
     </div>
@@ -89,7 +89,7 @@
                 name: document.getElementById('name').value,
                 phone: document.getElementById('phone').value,
                 email: document.getElementById('email').value
-            }
+              }
             axios.post('/reservations', food)
             .then(res=>{
               console.log("this is res " + res)

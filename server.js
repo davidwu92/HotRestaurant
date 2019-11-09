@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-let tables = [1, 2, 3]
+let tables = []
 let waitlist = []
 
 app.post('/reservations', (req, res)=>{
@@ -19,17 +19,17 @@ app.post('/reservations', (req, res)=>{
     console.log(waitlist)
   }
   res.sendStatus(200)
-})
+ })
 
-app.get("/home", (req,res)=>{
-  res.sendFile(path.join(__dirname, './public/home.html'))
-})
-app.get("/reserve", (req,res)=>{
-  res.sendFile(path.join(__dirname, './public/reserve.html'))
-})
-app.get("/tables", (req,res)=>{
-  res.sendFile(path.join(__dirname, './public/tables.html'))
-})
+// app.get("/home", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/index.html'))
+// })
+// app.get("/reserve", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/reserve.html'))
+// })
+// app.get("/tables", (req,res)=>{
+//   res.sendFile(path.join(__dirname, './public/tables.html'))
+// })
 
 app.get('/showtables', (req, res)=>{
   console.log("getting tables")
